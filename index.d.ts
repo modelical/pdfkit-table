@@ -1,6 +1,5 @@
-declare module 'pdfkit-table' 
-{
-	import PDFDocument from 'pdfkit';
+declare module "modelical-pdfkit-table" {
+	import PDFDocument from "pdfkit";
 
 	interface Rect {
 		x: number;
@@ -26,7 +25,7 @@ declare module 'pdfkit-table'
 			indexRow?: number,
 			row?: number,
 			rectRow?: Rect,
-			rectCell?: Rect
+			rectCell?: Rect,
 		) => string;
 	}
 
@@ -59,16 +58,15 @@ declare module 'pdfkit-table'
 		horizontal?: DividerOptions;
 	}
 
-	interface Title 
-	{
+	interface Title {
 		label: string;
 		fontSize?: number;
 		fontFamily?: string;
-		color?: string; 
+		color?: string;
 	}
 
 	interface Options {
-		title?: string | Title ;
+		title?: string | Title;
 		subtitle?: string | Title;
 		width?: number;
 		x?: number; //default doc.x
@@ -76,7 +74,7 @@ declare module 'pdfkit-table'
 		divider?: Divider;
 		columnsSize?: number[];
 		columnSpacing?: number; //default 5
-		padding?: number[]; 
+		padding?: number[];
 		addPage?: boolean; //default false
 		hideHeader?: boolean;
 		minRowHeight?: number;
@@ -86,7 +84,7 @@ declare module 'pdfkit-table'
 			indexColumn?: number,
 			indexRow?: number,
 			rectRow?: Rect,
-			rectCell?: Rect
+			rectCell?: Rect,
 		) => PDFDocumentWithTables;
 	}
 
